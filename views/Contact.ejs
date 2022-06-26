@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/head.ejs") %>
+    <body>
+    <%- include("./partials/nav.ejs") %>
+  
+<h1 class="heading"> Please contact us:</h1>
+    <div class="create-blog content">
+        <form>
+          <label for="title">email:</label>
+          <input type="email" id="title" placeholder="Foulen@gmail.com" required>
+          <label for="snippet">object:</label>
+          <input type="text" id="snippet" required>
+          <label for="body">Type your view:</label>
+          <textarea id="body" required></textarea>
+          <button>Submit</button>
+        </form>
+        </div>
+</body>
+
+<%- include("./partials/footer.ejs") %>
+</html>
