@@ -2,12 +2,12 @@ const requestTime = (req, res, next)=>{
 const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday", "Saturday"];
 const dayWork=["Monday","Tuesday","Wednesday","Thursday","Friday"]
 const d = new Date();
-const day= weekday[new Date().getDay()]
+const day= weekday[d.getDay()]
 let hour = d.getHours();
-if((dayWork.includes(day) && hour >= 9 && hour<=15)){
+if((dayWork.includes(day) && hour >= 9 && hour <= 17)){
     next()}
     else{
-  res.status(500).send('We are out of service now, come back tomorrow!')
+  res.status(400).send('Out of service, come back tomorrow!')
     }
 }
 

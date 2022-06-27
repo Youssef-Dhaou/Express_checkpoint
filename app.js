@@ -16,7 +16,7 @@ app.set("view engine", "ejs")
 app.set("views", "./views")
 
 // Apply middleware
-//app.use(requestTime)
+app.use(requestTime)
 
 app.get("/", (req, res)=>{
     const products=[
